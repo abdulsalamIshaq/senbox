@@ -14,7 +14,7 @@ class Client implements HttpClientInterface
      * Base url of termii api
      * @var string
      */
-    public $url = 'https://sandbox.staging.sendbox.co/';
+    public $url = 'https://live.sendbox.co/';
 
     /**
      * User agent for the HTTP client
@@ -152,7 +152,9 @@ class Client implements HttpClientInterface
     public function apiMap()
     {
         return [
+            'auth' => \AbdulsalamIshaq\Sendbox\Api\Auth::class,
             'shipment' => \AbdulsalamIshaq\Sendbox\Api\Shipment::class,
+            'payment' => \AbdulsalamIshaq\Sendbox\Api\Payment::class,
         ];
     }
 
