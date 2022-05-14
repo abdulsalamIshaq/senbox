@@ -14,7 +14,7 @@ class Client implements HttpClientInterface
      * Base url of termii api
      * @var string
      */
-    public $url = 'https://live.sendbox.co/';
+    public $base_url = 'https://live.sendbox.co/';
 
     /**
      * User agent for the HTTP client
@@ -23,10 +23,34 @@ class Client implements HttpClientInterface
     protected $userAgent = 'Sendbox Library: abdulsalamishaq/sendbox';
 
     /**
-     * Secret Key for Sendbox api
+     * Access Key for Sendbox api
      * @var string
      */
     protected $access_token;
+
+    /**
+     * Client secrete for Sendbox api
+     * @var string
+     */
+    protected $client_secret;
+
+    /**
+     * App ID for Sendbox api
+     * @var string
+     */
+    protected $app_id;
+
+    /**
+     * Refresh token for Sendbox api
+     * @var string
+     */
+    protected $refresh_token;
+
+    /**
+     * Redirect url 
+     * @var string
+     */
+    protected $redirect_url;
 
     public function __construct(string $access_token, array $options = null)
     {
@@ -111,7 +135,7 @@ class Client implements HttpClientInterface
      */
     public function baseUri()
     {
-        return $this->url;
+        return $this->base_url;
     }
 
     /**
@@ -152,7 +176,7 @@ class Client implements HttpClientInterface
     public function apiMap()
     {
         return [
-            'auth' => \AbdulsalamIshaq\Sendbox\Api\Auth::class,
+            // 'auth' => \AbdulsalamIshaq\Sendbox\Api\Auth::class,
             'shipment' => \AbdulsalamIshaq\Sendbox\Api\Shipment::class,
             'payment' => \AbdulsalamIshaq\Sendbox\Api\Payment::class,
         ];

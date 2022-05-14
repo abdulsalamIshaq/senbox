@@ -28,14 +28,15 @@ class Auth extends AbstractApi
      * 
      * @return Array
      */
-    public function getNewAccessToken(): Array 
+    public function getNewAccessToken(String $app_id, String $client_secret, String $refresh_token) 
     {
-        die(print_r($this));
-        $response = $this->get(`oauth/access/{$this->app_id}/refresh`, [
-            'app_id' => $this->app_id,
-            'client_secret' => $this->client_secret,
+        
+        $response = $this->get('oauth/access/{$app_id}/refresh', [
+            'app_id' => $app_id,
+            'client_secret' => $client_secret,
             // 'refresh_token' => $this->refresh_token
-        ]);
-        return $this->responseArray($response);
+        ], ['refresh_token' => $refresh_token]);
+        
+        // return $this->responseArray($response);
     }
 }
