@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="2" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.013335">
-    <testsuite name="P\Tests\ClientTest" file="/opt/lampp/htdocs/senbox/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(222) : eval()'d code" tests="2" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.013335">
-      <testcase name="it test class handler" assertions="3" time="0.013129"/>
-      <testcase name="it test mass fill" assertions="1" time="0.000206"/>
+  <testsuite name="" tests="2" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.091140">
+    <testsuite name="P\Tests\ClientTest" file="/opt/lampp/htdocs/senbox/vendor/pestphp/pest/src/Factories/TestCaseFactory.php(222) : eval()'d code" tests="2" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.091140">
+      <testcase name="it test class handler" assertions="3" time="0.090912"/>
+      <testcase name="it test mass fill" assertions="1" time="0.000228"/>
     </testsuite>
   </testsuite>
 </testsuites>
