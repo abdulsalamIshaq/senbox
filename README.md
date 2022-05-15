@@ -7,7 +7,7 @@ Uses [Sendbox API](https://docs.sendbox.co/).
 ## Requirements
 
 * PHP ^8.0
-* Guzzlehttp ^6|^7
+* Guzzlehttp ^7.0
 
 ## Installation
 
